@@ -1,0 +1,54 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Threading.Tasks;
+using Xamarin_Forms_demo.Models;
+using Xamarin_Forms_demo.ViewModels;
+using Microsoft.Maui;
+using Microsoft.Maui.Controls;
+
+namespace Xamarin_Forms_demo.Views
+{
+    [DesignTimeVisible(false)]
+    public partial class TestIndexPage : ContentPage
+    {
+        private readonly ExamsViewModel _examsViewModel;
+        public TestIndexPage()
+        {
+            InitializeComponent();
+            BindingContext = _examsViewModel = new ExamsViewModel();
+        }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            _examsViewModel.GetListAsync();
+        }
+
+        private async void OnEnterExamQuestionsPageAsync(object sender, SelectionChangedEventArgs e)
+        {
+            if (e.CurrentSelection.Count == 0)
+                return;
+            (sender as CollectionView).SelectedItem = null;
+            //int selected_id = ((Exams)e.CurrentSelection[0]).id;
+            var selected = (Exams)e.CurrentSelection[0];
+            await Navigation.PushAsync(new ExamQuestionsPage(selected));
+        }
+
+        private void OnTypeButtonToggle(object sender, EventArgs e)
+        {
+            //make all box to transparent.
+            BoxView boxView;
+            foreach (var child in listTabNavbar.Children)
+            {
+                boxView = ((StackLayout)child).Children[1] as BoxView;
+                boxView.Color = Colors.Transparent;
+            }
+
+            //this is a important thing to get a element in a event just remeber the |as| act
+            boxView = (((Button)sender).Parent as StackLayout).Children[1] as BoxView;
+            Console.WriteLine(boxView.ClassId);
+            boxView.Color = Colors.Gray;
+        }
+    }
+}

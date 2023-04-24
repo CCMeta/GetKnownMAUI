@@ -54,7 +54,7 @@ namespace GetKnownAPI.Controllers
             //count&&set each item score
             foreach (ExamAnswers examAnswer in examAnswers)
             {
-                string true_answer = examQuestions.First(examQuestion => examQuestion.id == examAnswer.questionId).true_answer;
+                string? true_answer = examQuestions.First(examQuestion => examQuestion.id == examAnswer.questionId).true_answer;
                 examAnswer.point = (examAnswer.answer == true_answer) ? 5 : 0;
             }
 

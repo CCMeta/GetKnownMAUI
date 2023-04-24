@@ -1,0 +1,31 @@
+﻿using System;
+using System.ComponentModel;
+using Xamarin_Forms_demo.ViewModels;
+using Microsoft.Maui;
+using Microsoft.Maui.Controls;
+
+namespace Xamarin_Forms_demo.Views
+{
+    [DesignTimeVisible(false)]
+    public partial class SendPostPage : ContentPage
+    {
+        private readonly PostsViewModel _postsViewModel;
+        public SendPostPage()
+        {
+            InitializeComponent();
+            BindingContext = _postsViewModel = new PostsViewModel();
+            //var _ = Xamarin.Essentials.DeviceDisplay.MainDisplayInfo.Height;
+            //PostEditor.HeightRequest = Xamarin.Essentials.DeviceDisplay.MainDisplayInfo.Height / 2;
+        }
+
+        async void ToolbarItem_ClickedAsync(object sender, EventArgs e)
+        {
+            if (PostEditor.Text.Length == 0)
+                return;
+            var result = await _postsViewModel.PostAsync(PostEditor.Text);
+            if (result)
+                await DisplayAlert("提交动态", "提交动态成功", "确定");
+            await Navigation.PopAsync();
+        }
+    }
+}

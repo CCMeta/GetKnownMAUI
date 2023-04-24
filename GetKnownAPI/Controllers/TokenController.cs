@@ -43,11 +43,12 @@ namespace GetKnownAPI.Controllers
             if (result.Count() == 1)
             {
                 var _user = result.First();
-
-                var token = _sessionService.CreatToken(_user.username);
-                _sessionService.Sessions.Add(token, _user.id);
-
-                return Ok(new { token, _user.username, _user.avatar, _user.id, _user.nickname,_user.intro });
+                if (_user.username is not null)
+                {
+                    var token = _sessionService.CreatToken(_user.username);
+                    _sessionService.Sessions.Add(token, _user.id);
+                    return Ok(new { token, _user.username, _user.avatar, _user.id, _user.nickname, _user.intro });
+                }
             }
             return NotFound(user);
         }

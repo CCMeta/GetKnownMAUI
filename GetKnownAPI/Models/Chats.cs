@@ -11,9 +11,9 @@ namespace GetKnownAPI.Models
         public int uid { get; set; }
         public int partner_id { get; set; }
         public int isRead { get; set; }
-        public string created_at { get; set; }
-        public string content { get; set; }
-        public string avatar { get; set; }
+        public string? created_at { get; set; }
+        public string? content { get; set; }
+        public string? avatar { get; set; }
 
     }
 }

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:views="clr-namespace:Xamarin_Forms_demo.Views"
+            xmlns:android="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.AndroidSpecific;assembly=Microsoft.Maui.Controls"
+            x:Class="Xamarin_Forms_demo.Views.SNSTabbedPage"
+            android:TabbedPage.ToolbarPlacement="Bottom"
+            Title="社交模式">
+    <views:PostsPage Title="好友动态">
+        <ContentPage.IconImageSource>
+            <FontImageSource Glyph="&#xf0a1;" FontFamily="FontAwesome5Solid" />
+        </ContentPage.IconImageSource>
+    </views:PostsPage>
+    <views:SessionsPage Title="聊天列表">
+        <ContentPage.IconImageSource>
+            <FontImageSource Glyph="&#xf0c0;" FontFamily="FontAwesome5Solid" />
+        </ContentPage.IconImageSource>
+    </views:SessionsPage>
+    <views:SubjectsPage Title="兴趣爱好">
+        <ContentPage.IconImageSource>
+            <FontImageSource Glyph="&#xf004;" FontFamily="FontAwesome5Solid" />
+        </ContentPage.IconImageSource>
+    </views:SubjectsPage>
+    <views:GroupsPage Title="更多内容">
+        <ContentPage.IconImageSource>
+            <FontImageSource Glyph="&#xf004;" FontFamily="FontAwesome5Solid" />
+        </ContentPage.IconImageSource>
+    </views:GroupsPage>
+</TabbedPage>

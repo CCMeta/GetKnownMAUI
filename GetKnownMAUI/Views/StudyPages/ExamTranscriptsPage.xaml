@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://schemas.microsoft.com/dotnet/2021/maui/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             mc:Ignorable="d"
+             x:Class="Xamarin_Forms_demo.Views.ExamTranscriptsPage"
+             Title="{Binding Title}">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Clicked="OnEnterAnswerCard">
+            <ToolbarItem.IconImageSource>
+                <FontImageSource Glyph="&#xf573;" FontFamily="FontAwesome5Solid" Size="Medium" />
+            </ToolbarItem.IconImageSource>
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
+    <StackLayout>
+        <StackLayout Padding="30" Orientation="Horizontal">
+            <Label TextColor="#00CCCC" VerticalTextAlignment="Center" HorizontalOptions="EndAndExpand">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="&#xf5da;" FontFamily="FontAwesome5Solid"/>
+                        <Span x:Name="CurrentPositionSpan"/>
+                        <Span x:Name="TotalCountSpan"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+        </StackLayout>
+        <CarouselView Loop="False" x:Name="ExamQuestionsView" PositionChanged="OnOrderNumberChanged" ItemsSource="{Binding ExamAnswers}">
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <AbsoluteLayout>
+                        <StackLayout Padding="20"
+                            AbsoluteLayout.LayoutBounds="0,0,1,1" 
+                            AbsoluteLayout.LayoutFlags="SizeProportional">
+                            <Label TextColor="Black" Margin="0,20" Text="{Binding content}" FontSize="Body" HorizontalOptions="CenterAndExpand" />
+                            <RadioButton IsEnabled="False" IsChecked="{Binding isCheckA}" Content="{Binding op_a}" Value="A" TextColor="#00CCCC"/>
+                            <BoxView Color="#DDD" HeightRequest="1" HorizontalOptions="Fill" />
+                            <RadioButton IsEnabled="False" IsChecked="{Binding isCheckB}" Content="{Binding op_b}" Value="B" TextColor="#00CCCC"/>
+                            <BoxView Color="#DDD" HeightRequest="1" HorizontalOptions="Fill" />
+                            <RadioButton IsEnabled="False" IsChecked="{Binding isCheckC}" Content="{Binding op_c}" Value="C" TextColor="#00CCCC"/>
+                            <BoxView Color="#DDD" HeightRequest="1" HorizontalOptions="Fill" />
+                            <RadioButton IsEnabled="False" IsChecked="{Binding isCheckD}" Content="{Binding op_d}" Value="D" TextColor="#00CCCC"/>
+                        </StackLayout>
+                        <Frame IsVisible="false" Margin="20" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="SizeProportional">
+                            <StackLayout>
+                                <Label FontSize="Medium" Text="题目解析"/>
+                                <BoxView Margin="-20,10" Color="#DDD" HeightRequest="1" HorizontalOptions="Fill" />
+                                <Label Text="{Binding true_answer,StringFormat='正确答案：{0}'}" />
+                                <Label Text="{Binding analysis}" />
+                            </StackLayout>
+                        </Frame>
+                        <Button Text="查看解析" Clicked="OnShowAnalysisModal" TextColor="#FFF" BackgroundColor="#00CCCC"
+                                AbsoluteLayout.LayoutBounds="0.5,0.9" AbsoluteLayout.LayoutFlags="PositionProportional"/>
+                    </AbsoluteLayout>
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
+    </StackLayout>
+</ContentPage>

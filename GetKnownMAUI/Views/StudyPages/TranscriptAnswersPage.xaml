@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://schemas.microsoft.com/dotnet/2021/maui/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Xamarin_Forms_demo.Views.TranscriptAnswersPage"
+             Title="{Binding Title}">
+    <StackLayout>
+        <CollectionView ItemsSource="{Binding ExamAnswers}" ItemsLayout="VerticalGrid, 5"
+                    SelectionMode="Single" SelectionChanged="OnItemSelected">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Padding="10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Frame BackgroundColor="Red" IsVisible="{Binding IsWrong}" CornerRadius="50"
+                            WidthRequest="50" HeightRequest="50" VerticalOptions="Center" HorizontalOptions="Center" Padding="0">
+                            <Label HorizontalOptions="Center" VerticalOptions="Center" TextColor="White" Text="{Binding id}" FontSize="Body"/>
+                        </Frame>
+                        <Frame BackgroundColor="#00cccc" IsVisible="{Binding IsCorrect}" CornerRadius="50"
+                            WidthRequest="50" HeightRequest="50" VerticalOptions="Center" HorizontalOptions="Center" Padding="0">
+                            <Label HorizontalOptions="Center" VerticalOptions="Center" TextColor="White" Text="{Binding id}" FontSize="Body"/>
+                        </Frame>
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+            <CollectionView.Footer>
+                <Frame Margin="20">
+                    <StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="00:00" HorizontalOptions="StartAndExpand"/>
+                            <Label Text="80%" HorizontalOptions="CenterAndExpand"/>
+                            <Label Text="21 / 22" HorizontalOptions="EndAndExpand"/>
+                        </StackLayout>
+                        <StackLayout>
+                            <Label Text="选择题 / 4X2=8"/>
+                            <Label Text="问答题 / 4X2=8"/>
+                            <Label Text="总分 / 4X2=8"/>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+            </CollectionView.Footer>
+        </CollectionView>
+    </StackLayout>
+</ContentPage>

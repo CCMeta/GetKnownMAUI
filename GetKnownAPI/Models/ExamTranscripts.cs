@@ -5,10 +5,10 @@
         public int id { get; set; }
         public int uid { get; set; }
         public int duration { get; set; }
-        public string title { get; set; }
-        public string major { get; set; }
+        public string? title { get; set; }
+        public string? major { get; set; }
         public double score { get; set; }
-        public string created_at { get; set; }
+        public string? created_at { get; set; }
 
     }
 }

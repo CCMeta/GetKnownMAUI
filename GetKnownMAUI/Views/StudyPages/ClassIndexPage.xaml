@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/dotnet/2021/maui/design"
+             mc:Ignorable="d"
+             x:Class="Xamarin_Forms_demo.Views.ClassIndexPage"
+             Title="{Binding Title}">
+    <RefreshView IsRefreshing="{Binding IsBusy}"
+             Command="{Binding GetListCommand}">
+        <CollectionView  x:Name="collectionView"  
+                         ItemsSource="{Binding Courses}" 
+                         SelectionMode="Single"
+                         SelectionChanged="OnCoursesSelectedAsync"
+                         VerticalScrollBarVisibility="Always"
+                         ItemsUpdatingScrollMode="KeepScrollOffset">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Padding="20,10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="100" />
+                        </Grid.RowDefinitions>
+                        <Image Grid.Column="0" Source="{Binding image}" Aspect="AspectFill" />
+                        <Grid Grid.Column="1">
+                            <Label TextColor="Black" Grid.Row="0" FontSize="Body" Text="{Binding title}" Padding="5,0" MaxLines="6" VerticalOptions="CenterAndExpand" />
+                            <Label Grid.Row="1" Grid.Column="0" Text="{Binding speaker}" Padding="5,0" VerticalOptions="CenterAndExpand">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="{Binding speaker}" />
+                                        <Span Text=" / " />
+                                        <Span Text="{Binding major}" />
+                                        <Span Text=" / " />
+                                        <Span Text="高一" />
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                            <Label Grid.Row="2" Text="{Binding created_at}" Padding="5,0" VerticalOptions="CenterAndExpand" />
+                        </Grid>
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </RefreshView>
+</ContentPage>
