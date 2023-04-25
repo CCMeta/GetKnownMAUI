@@ -15,7 +15,7 @@
     <ContentPage.ToolbarItems>
         <ToolbarItem Clicked="OnEnterMyContactsAsync">
             <ToolbarItem.IconImageSource>
-                <FontImageSource Glyph="&#xf2b9;" FontFamily="OpenSansRegular" Size="Medium" />
+                <FontImageSource Glyph="&#xf2b9;" FontFamily="FontAwesome5Solid" Size="Medium" />
             </ToolbarItem.IconImageSource>
         </ToolbarItem>
         <ToolbarItem>

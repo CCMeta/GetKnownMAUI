@@ -45,7 +45,7 @@
                            HorizontalTextAlignment="Center" VerticalTextAlignment="Center">
                                         <Label.FormattedText>
                                             <FormattedString>
-                                                <Span FontSize="Caption" Text="&#xf0c0;" TextColor="#00cccc" FontFamily="OpenSansRegular"/>
+                                                <Span FontSize="Caption" Text="&#xf0c0;" TextColor="#00cccc" FontFamily="FontAwesome5Solid"/>
                                                 <Span FontSize="Caption" Text=" 22" TextColor="#00cccc"/>
                                             </FormattedString>
                                         </Label.FormattedText>

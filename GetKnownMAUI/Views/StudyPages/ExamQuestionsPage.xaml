@@ -9,7 +9,7 @@
     <ContentPage.ToolbarItems>
         <ToolbarItem Clicked="OnEnterAnswerCard">
             <ToolbarItem.IconImageSource>
-                <FontImageSource Glyph="&#xf573;" FontFamily="OpenSansRegular" Size="Medium" />
+                <FontImageSource Glyph="&#xf573;" FontFamily="FontAwesome5Solid" Size="Medium" />
             </ToolbarItem.IconImageSource>
         </ToolbarItem>
     </ContentPage.ToolbarItems>
@@ -19,7 +19,7 @@
             <Label TextColor="#00CCCC" VerticalTextAlignment="Center" HorizontalOptions="EndAndExpand">
                 <Label.FormattedText>
                     <FormattedString>
-                        <Span Text="&#xf5da;" FontFamily="OpenSansRegular"/>
+                        <Span Text="&#xf5da;" FontFamily="FontAwesome5Solid"/>
                         <Span x:Name="CurrentPositionSpan"/>
                         <Span x:Name="TotalCountSpan"/>
                     </FormattedString>

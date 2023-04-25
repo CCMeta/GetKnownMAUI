@@ -53,7 +53,7 @@
 	  <None Remove="Resources\Fonts\FontAwesome5Brands.otf" />
 	  <None Remove="Resources\Fonts\FontAwesome5Pro.ttf" />
 	  <None Remove="Resources\Fonts\FontAwesome5Regular.otf" />
-	  <None Remove="Resources\Fonts\OpenSansRegular.otf" />
+	  <None Remove="Resources\Fonts\FontAwesome5Solid.otf" />
 	</ItemGroup>
 
 	<ItemGroup>

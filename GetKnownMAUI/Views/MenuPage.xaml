@@ -19,48 +19,48 @@
                 <TableSection Title="工作模式">
                     <ViewCell x:Name="NavStudyViewCell">
                         <StackLayout Orientation="Horizontal">
-                            <Label Text="&#xf5da;" TextColor="DeepSkyBlue" FontSize="Body" WidthRequest="30" FontFamily="OpenSansRegular"  VerticalOptions="Center"/>
+                            <Label Text="&#xf5da;" TextColor="DeepSkyBlue" FontSize="Body" WidthRequest="30" FontFamily="FontAwesome5Solid"  VerticalOptions="Center"/>
                             <Label TextColor="#111" Text="学习模式" FontSize="Body" VerticalOptions="Center" />
-                            <Label Text="&#xf054;" FontSize="Body" FontFamily="OpenSansRegular" HorizontalOptions="EndAndExpand" VerticalOptions="Center" />
+                            <Label Text="&#xf054;" FontSize="Body" FontFamily="FontAwesome5Solid" HorizontalOptions="EndAndExpand" VerticalOptions="Center" />
                         </StackLayout>
                     </ViewCell>
                     <ViewCell x:Name="NavSNSViewCell">
                         <StackLayout Orientation="Horizontal">
-                            <Label Text="&#xf086;" TextColor="DarkSeaGreen" FontSize="Body"  WidthRequest="30" FontFamily="OpenSansRegular" VerticalOptions="Center"/>
+                            <Label Text="&#xf086;" TextColor="DarkSeaGreen" FontSize="Body"  WidthRequest="30" FontFamily="FontAwesome5Solid" VerticalOptions="Center"/>
                             <Label TextColor="#111" Text="社交模式" FontSize="Body" VerticalOptions="Center" />
-                            <Label Text="&#xf054;" FontSize="Body" FontFamily="OpenSansRegular" HorizontalOptions="EndAndExpand" VerticalOptions="Center" />
+                            <Label Text="&#xf054;" FontSize="Body" FontFamily="FontAwesome5Solid" HorizontalOptions="EndAndExpand" VerticalOptions="Center" />
                         </StackLayout>
                     </ViewCell>
                     <ViewCell>
                         <StackLayout Orientation="Horizontal">
-                            <Label Text="&#xf559;" TextColor="Red" FontSize="Body"  WidthRequest="30" FontFamily="OpenSansRegular" VerticalOptions="Center"/>
+                            <Label Text="&#xf559;" TextColor="Red" FontSize="Body"  WidthRequest="30" FontFamily="FontAwesome5Solid" VerticalOptions="Center"/>
                             <Label TextColor="#111" Text="竞技模式" FontSize="Body" VerticalOptions="Center" />
-                            <Label Text="&#xf054;" FontSize="Body" FontFamily="OpenSansRegular" HorizontalOptions="EndAndExpand" VerticalOptions="Center" />
+                            <Label Text="&#xf054;" FontSize="Body" FontFamily="FontAwesome5Solid" HorizontalOptions="EndAndExpand" VerticalOptions="Center" />
                         </StackLayout>
                     </ViewCell>
                 </TableSection>
                 <TableSection Title="设置">
                     <ViewCell>
                         <StackLayout Orientation="Horizontal">
-                            <Label Text="&#xf0f3;" FontSize="Body"  WidthRequest="30" FontFamily="OpenSansRegular" VerticalOptions="Center"/>
+                            <Label Text="&#xf0f3;" FontSize="Body"  WidthRequest="30" FontFamily="FontAwesome5Solid" VerticalOptions="Center"/>
                             <Label TextColor="#111" Text="通知" FontSize="Body" VerticalOptions="Center" />
                         </StackLayout>
                     </ViewCell>
                     <ViewCell>
                         <StackLayout Orientation="Horizontal">
-                            <Label Text="&#xf256;" FontSize="Body"  WidthRequest="30" FontFamily="OpenSansRegular" VerticalOptions="Center"/>
+                            <Label Text="&#xf256;" FontSize="Body"  WidthRequest="30" FontFamily="FontAwesome5Solid" VerticalOptions="Center"/>
                             <Label TextColor="#111" Text="隐私" FontSize="Body" VerticalOptions="Center" />
                         </StackLayout>
                     </ViewCell>
                     <ViewCell>
                         <StackLayout Orientation="Horizontal">
-                            <Label Text="&#xf013;" FontSize="Body"  WidthRequest="30" FontFamily="OpenSansRegular" VerticalOptions="Center"/>
+                            <Label Text="&#xf013;" FontSize="Body"  WidthRequest="30" FontFamily="FontAwesome5Solid" VerticalOptions="Center"/>
                             <Label TextColor="#111" Text="设置" FontSize="Body" VerticalOptions="Center" />
                         </StackLayout>
                     </ViewCell>
                     <ViewCell>
                         <StackLayout Orientation="Horizontal">
-                            <Label Text="&#xf059;" FontSize="Body"  WidthRequest="30" FontFamily="OpenSansRegular" VerticalOptions="Center"/>
+                            <Label Text="&#xf059;" FontSize="Body"  WidthRequest="30" FontFamily="FontAwesome5Solid" VerticalOptions="Center"/>
                             <Label TextColor="#111" Text="帮助" FontSize="Body" VerticalOptions="Center" />
                         </StackLayout>
                     </ViewCell>
@@ -73,7 +73,7 @@
                     <StackLayout.GestureRecognizers>
                         <TapGestureRecognizer Tapped="OnToggleMajor"/>
                     </StackLayout.GestureRecognizers>
-                    <Label HorizontalOptions="Center" Text="&#xf698;" TextColor="DeepSkyBlue" FontFamily="OpenSansRegular"  VerticalOptions="Center"/>
+                    <Label HorizontalOptions="Center" Text="&#xf698;" TextColor="DeepSkyBlue" FontFamily="FontAwesome5Solid"  VerticalOptions="Center"/>
                     <Label TextColor="#111" Text="数学" HorizontalOptions="Center" VerticalOptions="Center" />
                 </StackLayout>
             </Frame>
@@ -82,7 +82,7 @@
                     <StackLayout.GestureRecognizers>
                         <TapGestureRecognizer Tapped="OnToggleMajor"/>
                     </StackLayout.GestureRecognizers>
-                    <Label HorizontalOptions="Center" Text="&#xf891;" TextColor="DeepSkyBlue" FontFamily="OpenSansRegular"  VerticalOptions="Center"/>
+                    <Label HorizontalOptions="Center" Text="&#xf891;" TextColor="DeepSkyBlue" FontFamily="FontAwesome5Solid"  VerticalOptions="Center"/>
                     <Label TextColor="#111" Text="语文" HorizontalOptions="Center" VerticalOptions="Center" />
                 </StackLayout>
             </Frame>
@@ -91,7 +91,7 @@
                     <StackLayout.GestureRecognizers>
                         <TapGestureRecognizer Tapped="OnToggleMajor"/>
                     </StackLayout.GestureRecognizers>
-                    <Label HorizontalOptions="Center" Text="&#xf66f;" TextColor="DeepSkyBlue" FontFamily="OpenSansRegular"  VerticalOptions="Center"/>
+                    <Label HorizontalOptions="Center" Text="&#xf66f;" TextColor="DeepSkyBlue" FontFamily="FontAwesome5Solid"  VerticalOptions="Center"/>
                     <Label TextColor="#111" Text="历史" HorizontalOptions="Center" VerticalOptions="Center" />
                 </StackLayout>
             </Frame>
