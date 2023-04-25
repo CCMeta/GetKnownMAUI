@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Xamarin_Forms_demo.Models
+namespace GetKnownMAUI.Models
 {
     public class Subjects
     {

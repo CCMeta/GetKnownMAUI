@@ -2,16 +2,16 @@
 using System.ComponentModel;
 using System.Threading.Tasks;
 
-using Xamarin_Forms_demo.Models;
+using GetKnownMAUI.Models;
 using Microsoft.Maui;
 using Microsoft.Maui.Controls;
 
-namespace Xamarin_Forms_demo.Views
+namespace GetKnownMAUI.Views
 {
     [DesignTimeVisible(false)]
     public partial class MainPage : FlyoutPage
     {
-        Dictionary<MenuItemType, NavigationPage> MenuPages = new Dictionary<MenuItemType, NavigationPage>();
+        readonly Dictionary<MenuItemType, NavigationPage> MenuPages = new();
         public MainPage()
         {
             InitializeComponent();

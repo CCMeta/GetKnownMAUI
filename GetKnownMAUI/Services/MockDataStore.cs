@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Xamarin_Forms_demo.Models;
+using GetKnownMAUI.Models;
 
-namespace Xamarin_Forms_demo.Services
+namespace GetKnownMAUI.Services
 {
     public class MockDataStore : IDataStore<Item>
     {

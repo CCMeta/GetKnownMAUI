@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Net.WebSockets;
 using System.Threading.Tasks;
-using Xamarin_Forms_demo.Models;
-using Xamarin_Forms_demo.Services;
-using Xamarin_Forms_demo.ViewModels;
+using GetKnownMAUI.Models;
+using GetKnownMAUI.Services;
+using GetKnownMAUI.ViewModels;
 using Microsoft.Maui;
 using Microsoft.Maui.Controls;
 
-namespace Xamarin_Forms_demo.Views
+namespace GetKnownMAUI.Views
 {
     [DesignTimeVisible(false)]
     public partial class MenuPage : ContentPage

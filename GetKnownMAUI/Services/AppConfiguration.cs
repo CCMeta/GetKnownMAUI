@@ -7,7 +7,7 @@ using System.Text;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Configuration.Json;
 
-namespace Xamarin_Forms_demo.Services
+namespace GetKnownMAUI.Services
 {
     public class AppConfiguration : ConfigurationBuilder
     {

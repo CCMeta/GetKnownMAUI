@@ -4,8 +4,8 @@
              xmlns:d="http://schemas.microsoft.com/dotnet/2021/maui/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             xmlns:vm="clr-namespace:Xamarin_Forms_demo.ViewModels"
-             x:Class="Xamarin_Forms_demo.Views.SendPostPage"
+             xmlns:vm="clr-namespace:GetKnownMAUI.ViewModels"
+             x:Class="GetKnownMAUI.Views.SendPostPage"
              Title="{Binding Title}">
     <ContentPage.ToolbarItems>
         <ToolbarItem Clicked="ToolbarItem_ClickedAsync">

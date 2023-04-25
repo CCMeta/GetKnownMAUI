@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.SignalR.Client;
 using Microsoft.Maui;
 using Microsoft.Maui.Controls;
 
-namespace Xamarin_Forms_demo.Services
+namespace GetKnownMAUI.Services
 {
     public class ChatHub
     {

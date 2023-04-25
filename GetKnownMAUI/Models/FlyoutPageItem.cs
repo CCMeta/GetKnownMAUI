@@ -1,8 +1,8 @@
-﻿using Xamarin_Forms_demo.Views;
+﻿using GetKnownMAUI.Views;
 using Microsoft.Maui;
 using Microsoft.Maui.Controls;
 
-namespace Xamarin_Forms_demo.Models
+namespace GetKnownMAUI.Models
 {
     public enum MenuItemType
     {

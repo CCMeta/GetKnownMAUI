@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace Xamarin_Forms_demo.Services
+namespace GetKnownMAUI.Services
 {
     public interface IDataStore<T>
     {

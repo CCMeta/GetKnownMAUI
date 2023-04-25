@@ -1,24 +1,43 @@
-﻿namespace GetKnownMAUI;
+﻿using System.Collections.Generic;
+using System.ComponentModel;
+using System.Threading.Tasks;
 
-public partial class MainPage : ContentPage
+using Xamarin_Forms_demo.Models;
+using Microsoft.Maui;
+using Microsoft.Maui.Controls;
+
+namespace Xamarin_Forms_demo.Views
 {
-	int count = 0;
+    [DesignTimeVisible(false)]
+    public partial class MainPage : FlyoutPage
+    {
+        Dictionary<MenuItemType, NavigationPage> MenuPages = new Dictionary<MenuItemType, NavigationPage>();
+        public MainPage()
+        {
+            InitializeComponent();
+            FlyoutLayoutBehavior = FlyoutLayoutBehavior.Popover;
+            // define index page
+            MenuPages.Add(MenuItemType.StudyTabbed, (NavigationPage)Detail);
+        }
 
-	public MainPage()
-	{
-		InitializeComponent();
-	}
+        public async Task NavigateFromMenu(MenuItemType id)
+        {
+            if (!MenuPages.ContainsKey(id))
+            {
+                MenuPages.Add(id, new NavigationPage(FlyoutPageItem.GetPageById(id)));
+            }
 
-	private void OnCounterClicked(object sender, EventArgs e)
-	{
-		count++;
+            var newPage = MenuPages[id];
 
-		if (count == 1)
-			CounterBtn.Text = $"Clicked {count} time";
-		else
-			CounterBtn.Text = $"Clicked {count} times";
+            if (newPage != null && Detail != newPage)
+            {
+                Detail = newPage;
 
-		SemanticScreenReader.Announce(CounterBtn.Text);
-	}
+                if (DeviceInfo.Platform == DevicePlatform.Android)
+                    await Task.Delay(100);
+
+                IsPresented = false;
+            }
+        }
+    }
 }
-

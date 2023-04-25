@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using System.Linq;
-using Xamarin_Forms_demo.Models;
-using Xamarin_Forms_demo.Services;
+using GetKnownMAUI.Models;
+using GetKnownMAUI.Services;
 using System;
 using Microsoft.Maui;
 using Microsoft.Maui.Controls;
 
-namespace Xamarin_Forms_demo.ViewModels
+namespace GetKnownMAUI.ViewModels
 {
     public class PostsViewModel : BaseViewModel
     {

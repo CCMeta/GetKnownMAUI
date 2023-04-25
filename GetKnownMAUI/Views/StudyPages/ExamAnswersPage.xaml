@@ -4,7 +4,7 @@
              xmlns:d="http://schemas.microsoft.com/dotnet/2021/maui/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="Xamarin_Forms_demo.Views.ExamAnswersPage"
+             x:Class="GetKnownMAUI.Views.ExamAnswersPage"
              Title="{Binding Title}">
     <StackLayout>
         <CollectionView ItemsSource="{Binding ExamQuestions}" ItemsLayout="VerticalGrid, 5"

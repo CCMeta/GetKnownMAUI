@@ -5,12 +5,12 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
-using Xamarin_Forms_demo.Models;
-using Xamarin_Forms_demo.Services;
+using GetKnownMAUI.Models;
+using GetKnownMAUI.Services;
 using Microsoft.Maui;
 using Microsoft.Maui.Controls;
 
-namespace Xamarin_Forms_demo.ViewModels
+namespace GetKnownMAUI.ViewModels
 {
     public class BaseViewModel : INotifyPropertyChanged
     {

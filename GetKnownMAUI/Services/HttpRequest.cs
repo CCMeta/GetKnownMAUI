@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using System.Web;
 using System.Net.Http.Headers;
 
-namespace Xamarin_Forms_demo.Services
+namespace GetKnownMAUI.Services
 {
     public class HttpRequest
     {

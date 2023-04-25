@@ -4,7 +4,7 @@
              xmlns:d="http://schemas.microsoft.com/dotnet/2021/maui/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="Xamarin_Forms_demo.Views.LoginPage"
+             x:Class="GetKnownMAUI.Views.LoginPage"
              Title="{Binding Title}">
     <StackLayout Padding="20" Spacing="20">
         <Label x:Name="MessageLabel" FontSize="Title" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
@@ -12,7 +12,7 @@
         <CollectionView x:Name="collectionView" ItemsSource="{Binding .}" ItemsLayout="VerticalGrid, 4" 
                         SelectionMode="Single" SelectionChanged="OnLoginClick">
             <CollectionView.Header>
-                <Label TextColor="#000" Text="请点击相应头像 即可用此身份登录" HorizontalTextAlignment="Center"/>
+                <Label TextColor="#111" Text="请点击相应头像 即可用此身份登录" HorizontalTextAlignment="Center"/>
             </CollectionView.Header>
             <CollectionView.ItemTemplate>
                 <DataTemplate>

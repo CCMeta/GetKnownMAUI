@@ -1,11 +1,11 @@
 ﻿using System;
 using System.ComponentModel;
-using Xamarin_Forms_demo.Models;
-using Xamarin_Forms_demo.ViewModels;
+using GetKnownMAUI.Models;
+using GetKnownMAUI.ViewModels;
 using Microsoft.Maui;
 using Microsoft.Maui.Controls;
 
-namespace Xamarin_Forms_demo.Views
+namespace GetKnownMAUI.Views
 {
     [DesignTimeVisible(false)]
     public partial class ClassIndexPage : ContentPage

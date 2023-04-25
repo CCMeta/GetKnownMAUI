@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.Maui;
 using Microsoft.Maui.Controls;
 
-namespace Xamarin_Forms_demo.Views
+namespace GetKnownMAUI.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
 public partial class SNSTabbedPage : TabbedPage

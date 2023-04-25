@@ -4,7 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/dotnet/2021/maui/design"
              mc:Ignorable="d"
-             x:Class="Xamarin_Forms_demo.Views.ClassIndexPage"
+             x:Class="GetKnownMAUI.Views.ClassIndexPage"
              Title="{Binding Title}">
     <RefreshView IsRefreshing="{Binding IsBusy}"
              Command="{Binding GetListCommand}">

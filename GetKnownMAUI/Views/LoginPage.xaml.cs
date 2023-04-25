@@ -1,15 +1,15 @@
 ﻿using System;
 using System.ComponentModel;
-using Xamarin_Forms_demo.ViewModels;
-using Xamarin_Forms_demo.Models;
+using GetKnownMAUI.ViewModels;
+using GetKnownMAUI.Models;
 using Microsoft.Extensions.Configuration;
-using Xamarin_Forms_demo.Services;
+using GetKnownMAUI.Services;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using Microsoft.Maui;
 using Microsoft.Maui.Controls;
 
-namespace Xamarin_Forms_demo.Views
+namespace GetKnownMAUI.Views
 {
     [DesignTimeVisible(false)]
     public partial class LoginPage : ContentPage

@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading.Tasks;
-using Xamarin_Forms_demo.Models;
-using Xamarin_Forms_demo.ViewModels;
+using GetKnownMAUI.Models;
+using GetKnownMAUI.ViewModels;
 using Microsoft.Maui;
 using Microsoft.Maui.Controls;
 
-namespace Xamarin_Forms_demo.Views
+namespace GetKnownMAUI.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class SubjectsPage : ContentPage
