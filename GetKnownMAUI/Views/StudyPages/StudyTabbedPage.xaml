@@ -9,23 +9,23 @@
     <TabbedPage.ToolbarItems>
         <ToolbarItem>
             <ToolbarItem.IconImageSource>
-                <FontImageSource Glyph="&#xf14b;" FontFamily="FontAwesome5Solid" Size="Medium" />
+                <FontImageSource Glyph="&#xf14b;" FontFamily="OpenSansRegular" Size="Medium" />
             </ToolbarItem.IconImageSource>
         </ToolbarItem>
     </TabbedPage.ToolbarItems>
     <views:ClassIndexPage Title="视频课堂">
         <ContentPage.IconImageSource> 
-            <FontImageSource Glyph="&#xf7f2;" FontFamily="FontAwesome5Solid"/>
+            <FontImageSource Glyph="&#xf7f2;" FontFamily="OpenSansRegular"/>
         </ContentPage.IconImageSource>
     </views:ClassIndexPage>
     <views:TestIndexPage Title="智能测试">
         <ContentPage.IconImageSource>
-            <FontImageSource Glyph="&#xf5ae;" FontFamily="FontAwesome5Solid"/>
+            <FontImageSource Glyph="&#xf5ae;" FontFamily="OpenSansRegular"/>
         </ContentPage.IconImageSource>
     </views:TestIndexPage>
     <views:DataIndexPage Title="数据中心">
         <ContentPage.IconImageSource>
-            <FontImageSource Glyph="&#xf1c0;" FontFamily="FontAwesome5Solid"/>
+            <FontImageSource Glyph="&#xf1c0;" FontFamily="OpenSansRegular"/>
         </ContentPage.IconImageSource>
     </views:DataIndexPage>
 </TabbedPage>

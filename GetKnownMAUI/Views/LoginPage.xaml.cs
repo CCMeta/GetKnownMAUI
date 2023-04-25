@@ -19,7 +19,7 @@ namespace GetKnownMAUI.Views
         public LoginPage()
         {
             InitializeComponent();
-            SetMainPage = () => Application.Current.MainPage = new MainPage();
+            //SetMainPage = () => Application.Current.MainPage = new MainPage();
 
             var AppConfiguration = Services.AppConfiguration.GetInstence();
             var httpClient = new HttpRequest(AppConfiguration["Host"]);
@@ -40,7 +40,11 @@ namespace GetKnownMAUI.Views
             collectionView.IsVisible = false;
             collectionView.SelectedItem = null;
             BaseViewModel.GetInstance().OnLogin(username: (e.CurrentSelection[0] as Users).username);
-            MainThread.BeginInvokeOnMainThread(SetMainPage);
+            Navigation.PushAsync(new MainPage());
+
+            MainThread.BeginInvokeOnMainThread(
+                 () => Application.Current.MainPage = new MainPage()
+            );
         }
 
     }

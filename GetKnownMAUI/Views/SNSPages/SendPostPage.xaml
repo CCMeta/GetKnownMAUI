@@ -10,7 +10,7 @@
     <ContentPage.ToolbarItems>
         <ToolbarItem Clicked="ToolbarItem_ClickedAsync">
             <ToolbarItem.IconImageSource>
-                <FontImageSource Glyph="&#xf00c;" FontFamily="FontAwesome5Solid" Size="Medium" />
+                <FontImageSource Glyph="&#xf00c;" FontFamily="OpenSansRegular" Size="Medium" />
             </ToolbarItem.IconImageSource>
         </ToolbarItem>
     </ContentPage.ToolbarItems>

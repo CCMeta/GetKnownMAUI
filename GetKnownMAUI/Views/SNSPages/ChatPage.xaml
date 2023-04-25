@@ -15,7 +15,7 @@
     <ContentPage.ToolbarItems>
         <ToolbarItem Clicked="OnEnterMyContactsAsync">
             <ToolbarItem.IconImageSource>
-                <FontImageSource Glyph="&#xf2b9;" FontFamily="FontAwesome5Solid" Size="Medium" />
+                <FontImageSource Glyph="&#xf2b9;" FontFamily="OpenSansRegular" Size="Medium" />
             </ToolbarItem.IconImageSource>
         </ToolbarItem>
     </ContentPage.ToolbarItems>
@@ -49,7 +49,7 @@
                 <Entry BackgroundColor="White" Completed="OnSendMessage" Focused="Entry_Focused" HorizontalOptions="FillAndExpand"/>
                 <Button BackgroundColor="Transparent" WidthRequest="25" HeightRequest="25">
                     <Button.ImageSource>
-                        <FontImageSource Size="25" Color="#00cccc" Glyph="&#xf055;" FontFamily="FontAwesome5Solid"/>
+                        <FontImageSource Size="25" Color="#00cccc" Glyph="&#xf055;" FontFamily="OpenSansRegular"/>
                     </Button.ImageSource>
                 </Button>
             </StackLayout>

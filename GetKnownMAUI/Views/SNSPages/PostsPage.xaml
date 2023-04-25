@@ -10,7 +10,7 @@
     <ContentPage.ToolbarItems>
         <ToolbarItem Clicked="OnPushPost">
             <ToolbarItem.IconImageSource>
-                <FontImageSource Glyph="&#xf56b;" FontFamily="FontAwesome5Solid" Size="Medium" />
+                <FontImageSource Glyph="&#xf56b;" FontFamily="OpenSansRegular" Size="Medium" />
             </ToolbarItem.IconImageSource>
         </ToolbarItem>
     </ContentPage.ToolbarItems>
@@ -51,7 +51,7 @@
                                                 TextColor="White" BackgroundColor="#00cccc" Clicked="OnFollowButtonClickAsync"
                                                 HorizontalOptions="EndAndExpand" VerticalOptions="Center">
                                             <Button.ImageSource>
-                                                    <FontImageSource Size="0" Glyph="&#xf0d7;" FontFamily="FontAwesome5Solid" Color="#00CCCC" />
+                                                    <FontImageSource Size="0" Glyph="&#xf0d7;" FontFamily="OpenSansRegular" Color="#00CCCC" />
                                             </Button.ImageSource>
                                         </Button>
                                     </StackLayout>
@@ -61,21 +61,21 @@
                                         <Button Text="666" FontSize="Caption" 
                                                 HorizontalOptions="FillAndExpand" BackgroundColor="White">
                                             <Button.ImageSource>
-                                                <FontImageSource Size="Caption" Glyph="&#xf14d;" FontFamily="FontAwesome5Solid" Color="#00CCCC" />
+                                                <FontImageSource Size="Caption" Glyph="&#xf14d;" FontFamily="OpenSansRegular" Color="#00CCCC" />
                                             </Button.ImageSource>
                                         </Button>
 
                                         <Button Text="666" FontSize="Caption"
                                                 HorizontalOptions="FillAndExpand" BackgroundColor="White">
                                             <Button.ImageSource>
-                                                <FontImageSource Size="Caption" Glyph="&#xf27a;" FontFamily="FontAwesome5Solid" Color="#00CCCC" />
+                                                <FontImageSource Size="Caption" Glyph="&#xf27a;" FontFamily="OpenSansRegular" Color="#00CCCC" />
                                             </Button.ImageSource>
                                         </Button>
 
                                         <Button FontSize="Caption" Text="666" 
                                                 HorizontalOptions="FillAndExpand" BackgroundColor="White">
                                             <Button.ImageSource>
-                                                <FontImageSource Size="Caption" Glyph="&#xf164;" FontFamily="FontAwesome5Solid" Color="#00CCCC" />
+                                                <FontImageSource Size="Caption" Glyph="&#xf164;" FontFamily="OpenSansRegular" Color="#00CCCC" />
                                             </Button.ImageSource>
                                         </Button>
                                     </StackLayout>

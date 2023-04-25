@@ -27,8 +27,7 @@
                                VerticalOptions="Center" HorizontalOptions="Center" Padding="0">
                             <Image WidthRequest="60" HeightRequest="60" Source="{Binding avatar}" Aspect="AspectFit"/>
                         </Frame>
-                        <Label Grid.Row="1" HorizontalOptions="Center" VerticalOptions="End" TextColor="Black" Text="{Binding nickname}" 
-                               FontSize="Body"/>
+                        <Label Grid.Row="1" HorizontalOptions="Center" VerticalOptions="End" TextColor="Black" Text="{Binding nickname}" FontSize="Body"/>
                     </Grid>
                 </DataTemplate>
             </CollectionView.ItemTemplate>

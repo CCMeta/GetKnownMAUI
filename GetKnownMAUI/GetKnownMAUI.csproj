@@ -50,15 +50,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Remove="MainPage.xaml.cs" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <MauiXaml Remove="MainPage.xaml" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <None Remove="MainPage.xaml.cs.shit" />
+	  <None Remove="Resources\Fonts\FontAwesome5Brands.otf" />
+	  <None Remove="Resources\Fonts\FontAwesome5Pro.ttf" />
+	  <None Remove="Resources\Fonts\FontAwesome5Regular.otf" />
+	  <None Remove="Resources\Fonts\OpenSansRegular.otf" />
 	</ItemGroup>
 
 	<ItemGroup>

@@ -14,7 +14,7 @@ namespace GetKnownMAUI.Views
         readonly Dictionary<MenuItemType, NavigationPage> MenuPages = new();
         public MainPage()
         {
-            //InitializeComponent();
+            InitializeComponent();
             FlyoutLayoutBehavior = FlyoutLayoutBehavior.Popover;
             // define index page
             MenuPages.Add(MenuItemType.StudyTabbed, (NavigationPage)Detail);

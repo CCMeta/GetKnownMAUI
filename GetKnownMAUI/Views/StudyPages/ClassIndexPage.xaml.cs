@@ -21,7 +21,7 @@ namespace GetKnownMAUI.Views
         protected override void OnAppearing()
         {
             base.OnAppearing();
-            IsBusy = true;
+            //IsBusy = true;
             _coursesViewModel.GetListAsync();
         }
 
