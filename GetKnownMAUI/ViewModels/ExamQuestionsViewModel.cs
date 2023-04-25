@@ -77,7 +77,7 @@ namespace GetKnownMAUI.ViewModels
             {
                 examAnswers.Add(new ExamAnswers { questionId = question.id });
             }
-            IsBusy = false;
+            IsWorking = false;
         }
 
 

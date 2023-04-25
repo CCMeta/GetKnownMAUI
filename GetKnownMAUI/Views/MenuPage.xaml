@@ -4,7 +4,7 @@
              x:Class="GetKnownMAUI.Views.MenuPage"
              Visual=""
              Title="MenuPage">
-    <StackLayout Padding="80">
+    <StackLayout Margin="20">
         <StackLayout Orientation="Horizontal" Padding="0,10">
             <Image Source="{Binding avatar}" HeightRequest="50"/>
             <StackLayout Orientation="Vertical">

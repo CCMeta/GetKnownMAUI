@@ -35,7 +35,7 @@
             </StackLayout>
         </StackLayout>
 
-        <RefreshView IsRefreshing="{Binding IsBusy}" Command="{Binding GetListCommand}">
+        <RefreshView IsRefreshing="{Binding IsWorking}" Command="{Binding GetListCommand}">
             <CollectionView  x:Name="collectionView" ItemsSource="{Binding ExamTranscripts}" 
                          VerticalScrollBarVisibility="Always" ItemsUpdatingScrollMode="KeepScrollOffset"
                          SelectionMode="Single" SelectionChanged="OnEnterExamTranscriptsPageAsync">

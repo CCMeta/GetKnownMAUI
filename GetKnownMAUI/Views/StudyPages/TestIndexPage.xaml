@@ -34,7 +34,7 @@
                 <BoxView HeightRequest="1" HorizontalOptions="FillAndExpand" VerticalOptions="EndAndExpand" />
             </StackLayout>
         </StackLayout>
-        <RefreshView IsRefreshing="{Binding IsBusy}" Command="{Binding GetListCommand}">
+        <RefreshView IsRefreshing="{Binding IsWorking}" Command="{Binding GetListCommand}">
             <CollectionView  x:Name="collectionView" ItemsSource="{Binding Exams}" 
                          VerticalScrollBarVisibility="Always" ItemsUpdatingScrollMode="KeepScrollOffset"
                          SelectionMode="Single" SelectionChanged="OnEnterExamQuestionsPageAsync">

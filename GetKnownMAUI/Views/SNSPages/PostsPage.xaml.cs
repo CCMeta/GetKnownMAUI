@@ -26,7 +26,7 @@ namespace GetKnownMAUI.Views
         protected override void OnAppearing()
         {
             base.OnAppearing();
-            IsBusy = true;
+            //IsRefreshing = true;
             _ = Task.Run(async () => await _postsViewModel.GetListAsync());
         }
 

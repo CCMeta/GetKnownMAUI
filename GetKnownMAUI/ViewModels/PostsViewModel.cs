@@ -65,7 +65,7 @@ namespace GetKnownMAUI.ViewModels
                 result.AddRange(posts);
                 posts.ReplaceRange(result);
             }
-            IsBusy = false;
+            IsWorking = false;
         }
 
         public async Task<bool> PostAsync(string content)

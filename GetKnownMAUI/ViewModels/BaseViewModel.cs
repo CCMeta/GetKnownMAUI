@@ -22,11 +22,11 @@ namespace GetKnownMAUI.ViewModels
         private static readonly HttpRequest _httpRequest = new(AppConfiguration["Host"]);
         public static HttpRequest HttpRequest { get => _httpRequest; }
 
-        private bool isBusy = false;
-        public bool IsBusy
+        private bool isWorking = false;
+        public bool IsWorking
         {
-            get { return isBusy; }
-            set { SetProperty(ref isBusy, value); }
+            get { return isWorking; }
+            set { SetProperty(ref isWorking, value); }
         }
 
         private string title = string.Empty;

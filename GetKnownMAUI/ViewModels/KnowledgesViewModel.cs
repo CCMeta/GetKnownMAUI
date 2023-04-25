@@ -43,7 +43,7 @@ namespace GetKnownMAUI.ViewModels
                     { "p",maxId.ToString() }
             };
             Knowledges = await HttpRequest.GetAsync<ObservableCollection<Knowledges>>(path, queryParams: queryParams);
-            IsBusy = false;
+            IsWorking = false;
         }
 
     }

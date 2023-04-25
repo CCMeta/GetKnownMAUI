@@ -38,15 +38,15 @@ namespace GetKnownMAUI.ViewModels
 
         public async void GetSubjectsAsync()
         {
-            if (IsBusy)
+            if (IsWorking)
                 return;
-            IsBusy = true;
+            IsWorking = true;
             int maxId = Subjects.Count > 0 ? Subjects[0].id : 0;
             var queryParams = new Dictionary<string, string>() {
                     { "p",maxId.ToString() }
             };
             Subjects = await HttpRequest.GetAsync<ObservableCollection<Subjects>>(path, queryParams: queryParams);
-            IsBusy = false;
+            IsWorking = false;
         }
 
         public ICommand OpenWebCommand { get; }

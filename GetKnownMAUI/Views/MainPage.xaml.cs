@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Threading.Tasks;
 
 using GetKnownMAUI.Models;
@@ -28,14 +29,11 @@ namespace GetKnownMAUI.Views
             }
 
             var newPage = MenuPages[id];
-
             if (newPage != null && Detail != newPage)
             {
                 Detail = newPage;
-
                 if (DeviceInfo.Platform == DevicePlatform.Android)
                     await Task.Delay(100);
-
                 IsPresented = false;
             }
         }

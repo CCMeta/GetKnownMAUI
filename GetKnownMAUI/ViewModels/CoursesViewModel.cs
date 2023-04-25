@@ -45,7 +45,7 @@ namespace GetKnownMAUI.ViewModels
             };
             using var _ = HttpRequest.GetAsync<ObservableCollection<Courses>>(path, queryParams: queryParams);
             Courses = await _;
-            IsBusy = false;
+            IsWorking = false;
         }
 
     }
