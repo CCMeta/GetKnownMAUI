@@ -38,7 +38,7 @@ namespace GetKnownMAUI.Views
             }
             StackLayout baba = ((CheckBox)sender).Parent as StackLayout;
             StackLayout yeye = baba.Parent as StackLayout;
-            foreach (StackLayout shushu in yeye.Children)
+            foreach (StackLayout shushu in yeye.Children.Cast<StackLayout>())
             {
                 if (!shushu.Equals(baba))
                 {

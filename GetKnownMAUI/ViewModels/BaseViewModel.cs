@@ -53,8 +53,7 @@ namespace GetKnownMAUI.ViewModels
         private static BaseViewModel _instance;
         public static BaseViewModel GetInstance()
         {
-            if (_instance == null)
-                _instance = new BaseViewModel();
+            _instance ??= new BaseViewModel();
             return _instance;
         }
 
