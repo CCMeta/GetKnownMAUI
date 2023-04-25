@@ -63,8 +63,8 @@ namespace GetKnownMAUI.ViewModels
         public void OnLogin(string username = null)
         {
             string _username = username is null ?
-                AppConfiguration["Identity:Username"] : username;
-            var _password = AppConfiguration["Identity:Password"];
+                AppConfiguration["Username"] : username;
+            var _password = AppConfiguration["Password"];
             Login(_username, _password);
         }
 
