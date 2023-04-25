@@ -6,9 +6,8 @@
              mc:Ignorable="d"
              x:Class="GetKnownMAUI.Views.LoginPage"
              Title="{Binding Title}">
-    <StackLayout Padding="20" Spacing="20">
-        <Label x:Name="MessageLabel" FontSize="Title" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
-                       Text="LOGIN PAGE" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
+    <StackLayout Padding="20" Spacing="20" BackgroundColor="DarkCyan">
+        <Label x:Name="MessageLabel" FontSize="Title" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Text="LOGIN PAGE" HorizontalOptions="FillAndExpand"/>
         <CollectionView x:Name="collectionView" ItemsSource="{Binding .}" ItemsLayout="VerticalGrid, 4" 
                         SelectionMode="Single" SelectionChanged="OnLoginClick">
             <CollectionView.Header>
@@ -19,6 +18,7 @@
                     <Grid Padding="10">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="auto" />
+                            <RowDefinition Height="auto" />
                         </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*" />
@@ -27,7 +27,7 @@
                                VerticalOptions="Center" HorizontalOptions="Center" Padding="0">
                             <Image WidthRequest="60" HeightRequest="60" Source="{Binding avatar}" Aspect="AspectFit"/>
                         </Frame>
-                        <Label Grid.Row="1" HorizontalOptions="Center" VerticalOptions="Center" TextColor="Black" Text="{Binding nickname}" 
+                        <Label Grid.Row="1" HorizontalOptions="Center" VerticalOptions="End" TextColor="Black" Text="{Binding nickname}" 
                                FontSize="Body"/>
                     </Grid>
                 </DataTemplate>
