@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using System.Collections.Generic;
 using Microsoft.Maui;
 using Microsoft.Maui.Controls;
+using System.Diagnostics;
 
 namespace GetKnownMAUI.Views
 {
@@ -23,12 +24,12 @@ namespace GetKnownMAUI.Views
             //SetMainPage = () => Application.Current.MainPage = new MainPage();
 
             var AppConfiguration = Services.AppConfiguration.GetInstence();
-            var httpClient = new HttpRequest(AppConfiguration["Host"]);
+            var httpClient = new HttpRequest(AppConfiguration["HOST"]);
             Task.Run(async () =>
             {
-                Console.WriteLine(httpClient._host);
+                Debug.WriteLine($"httpClient._host = {httpClient._host}");
                 users = await httpClient.GetAsync<List<Users>>("/api/token", new Dictionary<string, string>());
-                Console.WriteLine(users.Count);
+                Debug.WriteLine($"users.Count = {users.Count}");
                 collectionView.BindingContext = users;
             }).Wait();
         }
@@ -40,8 +41,8 @@ namespace GetKnownMAUI.Views
             {
                 Task.Run(async () =>
                 {
-                    await Task.Delay(3000);
-                    BaseViewModel.GetInstance().OnLogin();
+                    await Task.Delay(5000);
+                    BaseViewModel.GetInstance().OnLogin("wy");
                     await MainThread.InvokeOnMainThreadAsync(() => Application.Current.MainPage = new MainPage());
                 });
             }

@@ -9,6 +9,7 @@ using GetKnownMAUI.Models;
 using GetKnownMAUI.Services;
 using Microsoft.Maui;
 using Microsoft.Maui.Controls;
+using System.Diagnostics;
 
 namespace GetKnownMAUI.ViewModels
 {
@@ -19,7 +20,7 @@ namespace GetKnownMAUI.ViewModels
         private readonly static IConfiguration _appConfiguration = Services.AppConfiguration.GetInstence();
         public static IConfiguration AppConfiguration => _appConfiguration;
 
-        private static readonly HttpRequest _httpRequest = new(AppConfiguration["Host"]);
+        private static readonly HttpRequest _httpRequest = new(AppConfiguration["HOST"]);
         public static HttpRequest HttpRequest { get => _httpRequest; }
 
         private bool isWorking = false;
@@ -62,8 +63,8 @@ namespace GetKnownMAUI.ViewModels
         public void OnLogin(string username = null)
         {
             string _username = username is null ?
-                AppConfiguration["Username"] : username;
-            var _password = AppConfiguration["Password"];
+                AppConfiguration["USERNAME"] : username;
+            var _password = AppConfiguration["PASSWORD"];
             Login(_username, _password);
         }
 
@@ -79,10 +80,11 @@ namespace GetKnownMAUI.ViewModels
 
             //check success setting token 
             HttpRequest.Token = user.token;
+            Debug.WriteLine($"HttpRequest.Token = {HttpRequest.Token}");
             Me = user;
 
             //init local message signalr
-            //_chatHub = new ChatHub(AppConfiguration.GetValue<string>("Host") + "/chathub", Me.token);
+            _chatHub = new ChatHub(AppConfiguration["HOST"] + "/chathub", Me.token);
 
             //init contacts
             MyContactsViewModel.GetListAsync();

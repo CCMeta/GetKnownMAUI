@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Threading.Tasks;
 using System.Windows;
 using Microsoft.AspNetCore.SignalR.Client;
@@ -32,14 +33,18 @@ namespace GetKnownMAUI.Services
             //go connect
             try
             {
-                Task.Run(async () => await connection.StartAsync()).Wait();
-                // no need call from client i am whoops.
-                //Task.Run(() => SendMessage(MessageType.OnEventOnline, "", "online")); // i am online !
+                Task.Run(async () => await connection.StartAsync());
+                while (true)
+                {
+                    Debug.WriteLine($"GetState = {GetState()}");
+                }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                Debug.WriteLine(ex.Message);
             }
+            // no need call from client i am whoops.
+            //Task.Run(() => SendMessage(MessageType.OnEventOnline, "", "online")); // i am online !
         }
 
         public string GetState() => connection.State.ToString();

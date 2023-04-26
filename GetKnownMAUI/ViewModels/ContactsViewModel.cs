@@ -31,11 +31,11 @@ namespace GetKnownMAUI.ViewModels
 
         static MyContactsViewModel()
         {
-            //MessagingCenter.Subscribe<ChatHub, KeyValuePair<string, string>>(_chatHub, MessageType.OnEventChatSend.ToString(),
-                //(sender, arg) => GetListAsync());
+            MessagingCenter.Subscribe<ChatHub, KeyValuePair<string, string>>(_chatHub, MessageType.OnEventChatSend.ToString(),
+                (sender, arg) => GetListAsync());
 
-            //MessagingCenter.Subscribe<ChatHub, KeyValuePair<string, string>>(_chatHub, MessageType.OnEventOnline.ToString(),
-                //(sender, arg) => OnEventOnlinehandler(arg.Key, arg.Value));
+            MessagingCenter.Subscribe<ChatHub, KeyValuePair<string, string>>(_chatHub, MessageType.OnEventOnline.ToString(),
+                (sender, arg) => OnEventOnlinehandler(arg.Key, arg.Value));
             //if OnEventChatSend and user at chat GUI,then should fresh
         }
 

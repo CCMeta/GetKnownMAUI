@@ -14,9 +14,10 @@ namespace GetKnownMAUI.Services
     {
         private readonly static Dictionary<string, string> source = new()
         {
-            ["Username"] = "wy",
-            ["Password"] = "aaaaaa",
-            ["Host"] = "https://xamarin.ccmeta.com:9501",
+            ["USERNAME"] = "wy",
+            ["PASSWORD"] = "aaaaaa",
+            //["HOST"] = "http://192.168.10.224:5157",
+            ["HOST"] = "https://xamarin.ccmeta.com:9501",
         };
 
         public static IConfiguration GetInstence()

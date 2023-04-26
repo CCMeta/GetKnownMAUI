@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Net.WebSockets;
 using System.Threading.Tasks;
 using GetKnownMAUI.Models;
@@ -50,7 +51,9 @@ namespace GetKnownMAUI.Views
         protected override void OnAppearing()
         {
             base.OnAppearing();
-            //WebSocketStateLabel.Text = BaseViewModel._chatHub.GetState();
+            if (BaseViewModel._chatHub is not null)
+                WebSocketStateLabel.Text = BaseViewModel._chatHub.GetState();
+
         }
 
         private void OnLogout(object sender, EventArgs e)

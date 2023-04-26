@@ -18,9 +18,16 @@ builder.Services.AddSingleton<SessionService>()
                 .AddTransient<ChatsRepository>()
                 .AddTransient<UsersRepository>()
                 .AddTransient<PostsRepository>();
+
+
 builder.Services.AddSingleton<IUserIdProvider, ChatHubUserProvider>();
 builder.Services.AddSingleton<ChatHub>();
-builder.Services.AddSignalR();
+builder.Services.AddSignalR(hubOptions =>
+{
+    hubOptions.EnableDetailedErrors = true;
+    hubOptions.KeepAliveInterval = TimeSpan.FromMinutes(1);
+});
+
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddControllers().AddJsonOptions(options =>
 {
@@ -73,9 +80,11 @@ app.UseWhen(
         });
     });
 
+app.MapHub<ChatHub>("/chathub");
+
 app.UseEndpoints(endpoints =>
 {
-    endpoints.MapHub<ChatHub>("/chathub");
+    //endpoints.MapHub<ChatHub>("/chathub");
     endpoints.MapControllers();
 });
 
