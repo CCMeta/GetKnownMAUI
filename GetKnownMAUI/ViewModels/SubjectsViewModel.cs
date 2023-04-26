@@ -11,7 +11,7 @@ namespace GetKnownMAUI.ViewModels
 {
     public class SubjectsViewModel : BaseViewModel
     {
-        private readonly string path = "/api/subjects";
+        private readonly string path = "/maui_api/subjects";
         public ObservableCollection<Subjects> subjects = new ObservableCollection<Subjects>();
         public ObservableCollection<Subjects> Subjects
         {

@@ -62,7 +62,7 @@ app.UseMiddleware<AuthMiddleware>();
 app.UseWhen(
     predicate: context =>
     {
-        return context.Request.Path.Value is null || (context.Request.Path.Value.ToLower().Contains("/api") && context.Request.Path.Value.ToLower() != "/api/token");
+        return context.Request.Path.Value is null || (context.Request.Path.Value.ToLower().Contains("/maui_api") && context.Request.Path.Value.ToLower() != "/maui_api/token");
     },
     configuration: static (IApplicationBuilder app) =>
     {
@@ -80,11 +80,30 @@ app.UseWhen(
         });
     });
 
-app.MapHub<ChatHub>("/chathub");
+/**
+ * Be care with nginx proxy_pass options, especially [Connection "upgrade"]
+ * location /maui_chathub {
+      proxy_pass http://localhost:5000;
+
+      # Configure WebSockets
+      proxy_set_header Upgrade $http_upgrade;
+      proxy_set_header Connection "upgrade";
+      proxy_cache_bypass $http_upgrade;
+
+      # Configure ServerSentEvents
+      proxy_buffering off;
+
+      # Configure LongPolling
+      proxy_read_timeout 100s;
+
+      proxy_set_header Host $host;
+   }
+ */
+app.MapHub<ChatHub>("/maui_chathub");
 
 app.UseEndpoints(endpoints =>
 {
-    //endpoints.MapHub<ChatHub>("/chathub");
+    //endpoints.MapHub<ChatHub>("/maui_chathub");
     endpoints.MapControllers();
 });
 

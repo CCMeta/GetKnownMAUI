@@ -14,7 +14,7 @@ namespace GetKnownMAUI.ViewModels
     public class ExamQuestionsViewModel : BaseViewModel
     {
         public readonly int _exam_id;
-        private readonly string path = "/api/exams/{0}/questions";//i should take exam_id to query not path
+        private readonly string path = "/maui_api/exams/{0}/questions";//i should take exam_id to query not path
         public List<ExamAnswers> examAnswers = new List<ExamAnswers>();
 
         public ObservableCollection<ExamQuestions> examQuestions = new ObservableCollection<ExamQuestions>();

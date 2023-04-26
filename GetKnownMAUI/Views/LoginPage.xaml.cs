@@ -28,7 +28,7 @@ namespace GetKnownMAUI.Views
             Task.Run(async () =>
             {
                 Debug.WriteLine($"httpClient._host = {httpClient._host}");
-                users = await httpClient.GetAsync<List<Users>>("/api/token", new Dictionary<string, string>());
+                users = await httpClient.GetAsync<List<Users>>("/maui_api/token", new Dictionary<string, string>());
                 Debug.WriteLine($"users.Count = {users.Count}");
                 collectionView.BindingContext = users;
             }).Wait();

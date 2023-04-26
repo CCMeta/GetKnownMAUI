@@ -14,7 +14,7 @@ namespace GetKnownMAUI.ViewModels
     public class PostsViewModel : BaseViewModel
     {
 
-        private readonly string path = "/api/posts";
+        private readonly string path = "/maui_api/posts";
         public ObservableRangeCollection<Posts> posts = new ObservableRangeCollection<Posts>();
         public ObservableRangeCollection<Posts> Posts
         {

@@ -11,7 +11,7 @@ using GetKnownAPI.Services;
 
 namespace GetKnownAPI.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("maui_api/[controller]")]
     [ApiController]
     public class ChatsController : DefaultController
     {

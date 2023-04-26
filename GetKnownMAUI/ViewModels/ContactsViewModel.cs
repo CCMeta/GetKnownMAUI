@@ -13,7 +13,7 @@ namespace GetKnownMAUI.ViewModels
 {
     public class MyContactsViewModel : BaseViewModel
     {
-        private static readonly string path = "/api/contacts";
+        private static readonly string path = "/maui_api/contacts";
         public static ObservableCollection<MyContacts> contacts = new ObservableCollection<MyContacts>();
         public static ObservableCollection<MyContacts> MyContacts
         {

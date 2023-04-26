@@ -13,7 +13,7 @@ namespace GetKnownMAUI.ViewModels
 {
     public class CoursesViewModel : BaseViewModel
     {
-        private readonly string path = "/api/courses";
+        private readonly string path = "/maui_api/courses";
         public ObservableCollection<Courses> courses = new ObservableCollection<Courses>();
         public ObservableCollection<Courses> Courses
         {

@@ -74,7 +74,7 @@ namespace GetKnownMAUI.ViewModels
                 return;
             var identity = new Users { username = username, password = password };
 
-            var user = Task.Run(async () => await HttpRequest.PostAsync("/api/token", identity)).Result;
+            var user = Task.Run(async () => await HttpRequest.PostAsync("/maui_api/token", identity)).Result;
             if (string.IsNullOrEmpty(user.username))
                 throw new Exception($"No token responsed result = {user}");
 
@@ -84,7 +84,7 @@ namespace GetKnownMAUI.ViewModels
             Me = user;
 
             //init local message signalr
-            _chatHub = new ChatHub(AppConfiguration["HOST"] + "/chathub", Me.token);
+            _chatHub = new ChatHub(AppConfiguration["HOST"] + "/maui_chathub", Me.token);
 
             //init contacts
             MyContactsViewModel.GetListAsync();
