@@ -37,7 +37,9 @@ namespace GetKnownMAUI.Views
         protected override void OnAppearing()
         {
             base.OnAppearing();
-            if (users.Count > 0)
+            var need_auto_login = true;
+            need_auto_login = false;
+            if (need_auto_login && users.Count > 0)
             {
                 Task.Run(async () =>
                 {

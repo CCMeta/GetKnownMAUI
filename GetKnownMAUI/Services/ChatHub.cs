@@ -34,9 +34,17 @@ namespace GetKnownMAUI.Services
             try
             {
                 Task.Run(async () => await connection.StartAsync());
-                while (true)
+                while (GetState() == "connecting")
                 {
                     Debug.WriteLine($"GetState = {GetState()}");
+                }
+                switch (GetState())
+                {
+                    case "disconneted":
+                        Debug.WriteLine($"GetState = {GetState()}", "[ccmeta]");
+                        throw new Exception("SignalR server connect failed!");
+                    default:
+                        break;
                 }
             }
             catch (Exception ex)
