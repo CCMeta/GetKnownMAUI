@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Threading.Tasks;
 using GetKnownMAUI.Models;
 using GetKnownMAUI.ViewModels;
@@ -32,6 +33,7 @@ namespace GetKnownMAUI.Views
             (sender as CollectionView).SelectedItem = null;
             //int selected_id = ((Exams)e.CurrentSelection[0]).id;
             var selected = (Exams)e.CurrentSelection[0];
+            Debug.WriteLine($"selected = {selected}");
             await Navigation.PushAsync(new ExamQuestionsPage(selected));
         }
 

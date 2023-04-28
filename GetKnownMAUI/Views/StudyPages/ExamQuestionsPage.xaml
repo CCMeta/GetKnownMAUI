@@ -13,8 +13,8 @@
             </ToolbarItem.IconImageSource>
         </ToolbarItem>
     </ContentPage.ToolbarItems>
-    <StackLayout>
-        <StackLayout Padding="30" Orientation="Horizontal">
+    <StackLayout VerticalOptions="FillAndExpand">
+        <StackLayout Margin="30" Orientation="Horizontal">
             <Label Text="{Binding Duration}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand"/>
             <Label TextColor="#00CCCC" VerticalTextAlignment="Center" HorizontalOptions="EndAndExpand">
                 <Label.FormattedText>
@@ -26,19 +26,21 @@
                 </Label.FormattedText>
             </Label>
         </StackLayout>
-        <CarouselView Loop="False" x:Name="ExamQuestionsView" PositionChanged="OnOrderNumberChanged" ItemsSource="{Binding ExamQuestions}">
+        <CarouselView VerticalOptions="FillAndExpand" Loop="False" x:Name="ExamQuestionsView" PositionChanged="OnOrderNumberChanged" ItemsSource="{Binding ExamQuestions}">
             <CarouselView.ItemTemplate>
                 <DataTemplate>
-                    <StackLayout Padding="20">
-                        <Label TextColor="Black" Margin="0,20" Text="{Binding content}" FontSize="Body" HorizontalOptions="Center" />
-                        <RadioButton IsChecked="{Binding isCheckA}" CheckedChanged="OnAnswerSelected" Content="{Binding op_a}" Value="A" TextColor="#00CCCC"/>
-                        <BoxView Color="#DDD" HeightRequest="1" HorizontalOptions="Fill" />
-                        <RadioButton IsChecked="{Binding isCheckB}" CheckedChanged="OnAnswerSelected" Content="{Binding op_b}" Value="B" TextColor="#00CCCC"/>
-                        <BoxView Color="#DDD" HeightRequest="1" HorizontalOptions="Fill" />
-                        <RadioButton IsChecked="{Binding isCheckC}" CheckedChanged="OnAnswerSelected" Content="{Binding op_c}" Value="C" TextColor="#00CCCC"/>
-                        <BoxView Color="#DDD" HeightRequest="1" HorizontalOptions="Fill" />
-                        <RadioButton IsChecked="{Binding isCheckD}" CheckedChanged="OnAnswerSelected" Content="{Binding op_d}" Value="D" TextColor="#00CCCC"/>
-                    </StackLayout>
+                    <Border StrokeShape="RoundRectangle 10" Padding="20" Stroke="#00cccc" Margin="20,10">
+                        <StackLayout>
+                            <Label TextColor="Black" Margin="0,20" Text="{Binding content}" FontSize="Body" HorizontalOptions="Center" />
+                            <RadioButton IsChecked="{Binding isCheckA}" CheckedChanged="OnAnswerSelected" Content="{Binding op_a}" Value="A" TextColor="#00CCCC"/>
+                            <BoxView Color="#DDD" HeightRequest="1" HorizontalOptions="Fill" />
+                            <RadioButton IsChecked="{Binding isCheckB}" CheckedChanged="OnAnswerSelected" Content="{Binding op_b}" Value="B" TextColor="#00CCCC"/>
+                            <BoxView Color="#DDD" HeightRequest="1" HorizontalOptions="Fill" />
+                            <RadioButton IsChecked="{Binding isCheckC}" CheckedChanged="OnAnswerSelected" Content="{Binding op_c}" Value="C" TextColor="#00CCCC"/>
+                            <BoxView Color="#DDD" HeightRequest="1" HorizontalOptions="Fill" />
+                            <RadioButton IsChecked="{Binding isCheckD}" CheckedChanged="OnAnswerSelected" Content="{Binding op_d}" Value="D" TextColor="#00CCCC"/>
+                        </StackLayout>
+                    </Border>
                 </DataTemplate>
             </CarouselView.ItemTemplate>
         </CarouselView>

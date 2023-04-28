@@ -8,7 +8,7 @@ using GetKnownAPI.Models;
 
 namespace GetKnownAPI.Controllers
 {
-    [Route("api/ExamTranscripts/Answers")]
+    [Route("maui_api/ExamTranscripts/Answers")]
     [ApiController]
     public class ExamAnswersController : DefaultController
     {

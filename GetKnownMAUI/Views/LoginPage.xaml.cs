@@ -15,7 +15,7 @@ namespace GetKnownMAUI.Views
     [DesignTimeVisible(false)]
     public partial class LoginPage : ContentPage
     {
-        private readonly Action SetMainPage;
+        //private readonly Action SetMainPage;
         private List<Users> users;
 
         public LoginPage()
@@ -38,7 +38,7 @@ namespace GetKnownMAUI.Views
         {
             base.OnAppearing();
             var need_auto_login = true;
-            need_auto_login = false;
+            //need_auto_login = false;
             if (need_auto_login && users.Count > 0)
             {
                 Task.Run(async () =>
